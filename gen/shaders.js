@@ -1,5 +1,5 @@
 SHADERS={};SHADERS.example = {uniforms: {
-    tDiffuse: { type: 't', value: null }
+    tDiffuse: { "type": "t", "value": null }
 }
 ,vertexShader: "varying vec2 vUv;\r\n\r\nvoid main() {\r\n    vUv = uv;\r\n    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\r\n}\r\n",fragmentShader: "void main() {\r\n    gl_FragColor = vec4( 1.0, 0.0, 0.0, 0.5);\r\n}\r\n"};
 SHADERS.mountain = {uniforms: {
@@ -7,13 +7,20 @@ SHADERS.mountain = {uniforms: {
 }
 ,vertexShader: "uniform float time;\r\nvarying vec2 vUv;\r\n\r\nvoid main() {\r\n    vUv = uv;\r\n    vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );\r\n    gl_Position = projectionMatrix * mvPosition;\r\n}\r\n",fragmentShader: "uniform float time;\r\nuniform float party;\r\nuniform sampler2D gravel;\r\nuniform sampler2D grass;\r\nuniform sampler2D height;\r\nvarying vec2 vUv;\r\n\r\nvoid main(void) {\r\n    vec4 height = texture2D(height, vUv);\r\n    vec4 color = vec4(1.);\r\n    if(height.x < .03){\r\n        color = texture2D(gravel, vUv);\r\n    } else if(height.x < .8){\r\n        color = 0.1 + 0.8 * texture2D(grass, vUv*5.);\r\n    }\r\n\r\n    if(party > 0.){\r\n        color = texture2D(gravel, vUv * 5. + .1 * sin(time/500.));\r\n        color *= 0.2;\r\n        color += cos(3.141592 * time / 500.) * sin(3.141592 * time * vUv.y / 697. / 1.5) * sin(3.141592 * time * vUv.x / 887. / 1.5) * vec4(.6, 0., .2, .1);\r\n    }\r\n    gl_FragColor = color;\r\n}\r\n"};
 SHADERS.noise = {uniforms: {
-    tDiffuse: { type: 't', value: null },
-    time: { type: 'f', value: null },
-    amount: { type: 'f', value: 0},
-    width: { type: 'f', value: null},
-    height: { type: 'f', value: null}
+    tDiffuse: { "type": "t", "value": null },
+    time: { "type": "f", "value": null },
+    amount: { "type": "f", "value": 0},
+    width: { "type": "f", "value": null},
+    height: { "type": "f", "value": null}
 }
 ,vertexShader: "varying vec2 vUv;\r\n\r\nvoid main() {\r\n    vUv = uv;\r\n    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\r\n}\r\n",fragmentShader: "uniform float time;\r\nuniform float amount;\r\nuniform sampler2D tDiffuse;\r\nuniform float width;\r\nuniform float height;\r\nvarying vec2 vUv;\r\n\r\nfloat ranieyy(vec2 co) {\r\n    return fract(sin(dot(co.xy, vec2(12.9898,78.233))) * 43758.5453);\r\n}\r\n\r\nvoid main() {\r\n    vec4 colorInput = texture2D( tDiffuse, vUv );\r\n    vec2 pozz = vec2(floor(width*vUv.x)/width, floor(height*vUv.y)/height);\r\n    vec3 color = vec3(.1, 0.1, 0.1) + vec3(ranieyy(vec2(pozz+time/1009.0)));\r\n    gl_FragColor = colorInput*(1.0-amount)+amount*vec4(color, 0.1);\r\n}\r\n"};
+SHADERS.planetGlow = {uniforms: { 
+  "c": {type: "f", value: 1.0},
+  "p": {type: "f", value: 1.4},
+  "glowColor": {type: "c", value: null},
+  "viewVector": {type: "v3", value: null}
+}
+,vertexShader: "uniform vec3 viewVector;\r\nuniform float c;\r\nuniform float p;\r\nvarying float intensity;\r\n\r\nvoid main() {\r\n    vec3 vNormal = normalize(normalMatrix * normal);\r\n    vec3 vNormel = normalize(normalMatrix * viewVector);\r\n    intensity = pow(c - dot(vNormal, vNormel), p);\r\n    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);\r\n}\r\n",fragmentShader: "uniform vec3 glowColor;\r\nvarying float intensity;\r\n\r\nvoid main() {\r\n    vec3 glow = glowColor * intensity;\r\n    gl_FragColor = vec4(glow, 1.0);\r\n}\r\n"};
 SHADERS.water = {uniforms: {
     tDiffuse: { type: 't', value: null },
 }
