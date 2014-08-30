@@ -10,8 +10,20 @@
     "type": "SunLayer",
     "displayName": "Sun",
     "startFrame": 1000,
-    "endFrame": 3000,
+    "endFrame": 1999,
     "color": "#ffff00"
+  },
+  {
+    "type": "ParticleLayer",
+    "displayName": "Spaaaaarks",
+    "startFrame": 2000,
+    "endFrame": 3000,
+    "color": "#ff0000",
+    "dependencies": [
+      "Sparks",
+      "ThreeSparks",
+      "TWEEN"
+    ]
   },
   {
     "type": "NoiseFXLayer",

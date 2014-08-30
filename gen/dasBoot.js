@@ -7039,7 +7039,7 @@ THREE.Math = {
 
 /**
  * Spline from Tween.js, slightly optimized (and trashed)
- * http://sole.github.com/tween.js/examples/05_spline.html
+ * http://sole.github.com/TWEEN.js/examples/05_spline.html
  *
  * @author mrdoob / http://mrdoob.com/
  * @author alteredq / http://alteredqualia.com/
