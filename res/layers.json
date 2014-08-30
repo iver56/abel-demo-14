@@ -7,6 +7,13 @@
     "color": "#1b592f"
   },
   {
+    "type": "SunLayer",
+    "displayName": "Sun",
+    "startFrame": 1000,
+    "endFrame": 3000,
+    "color": "#ffff00"
+  },
+  {
     "type": "NoiseFXLayer",
     "displayName": "Noise fx",
     "startFrame": 4150,
