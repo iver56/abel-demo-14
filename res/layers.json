@@ -1,0 +1,19 @@
+[
+  {
+    "type": "BigBangLayer",
+    "displayName": "Big Bang",
+    "startFrame": 0,
+    "endFrame": 3000,
+    "color": "#1b592f"
+  },
+  {
+    "type": "NoiseFXLayer",
+    "displayName": "Noise fx",
+    "startFrame": 4150,
+    "endFrame": 8200,
+    "color": "#1b592f",
+    "config": {
+      "offset": 0
+    }
+  }
+]
