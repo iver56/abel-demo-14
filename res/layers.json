@@ -9,15 +9,15 @@
   {
     "type": "SunLayer",
     "displayName": "Sun",
-    "startFrame": 1000,
-    "endFrame": 1999,
+    "startFrame": 600,
+    "endFrame": 999,
     "color": "#ffff00"
   },
   {
     "type": "ParticleLayer",
     "displayName": "Spaaaaarks",
-    "startFrame": 2000,
-    "endFrame": 3000,
+    "startFrame": 1000,
+    "endFrame": 1599,
     "color": "#ff0000",
     "dependencies": [
       "Sparks",
@@ -26,10 +26,17 @@
     ]
   },
   {
+    "type": "ShoutOutLayer",
+    "displayName": "Shout-outs",
+    "startFrame": 1600,
+    "endFrame": 2361,
+    "color": "#1b592f"
+  },
+  {
     "type": "NoiseFXLayer",
     "displayName": "Noise fx",
-    "startFrame": 4150,
-    "endFrame": 8200,
+    "startFrame": 2180,
+    "endFrame": 2280,
     "color": "#1b592f",
     "config": {
       "offset": 0
