@@ -28,9 +28,8 @@
   {
     "type": "ShoutOutLayer",
     "displayName": "Shout-outs",
-    "startFrame": 1600,
-    "endFrame": 3961,
-    "oldEndFrame": 2361,
+    "startFrame": 2271,
+    "endFrame": 3426,
     "color": "#1b592f"
   },
   {

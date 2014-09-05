@@ -38,9 +38,9 @@ function ShoutOutLayer(layer) {
     ['-', '-', 'm', '-', 'l', 'b'],
     ['p', '-', 'm', '-', 'i', 'o'],
     ['r', '-', 'a', '-', 'o', 'o'],
-    ['o', 'r', '-', '-', 'n', 'd'],
+    ['o', 'n', '-', '-', 'n', 'd'],
     ['f', 'u', 'e', '-', 'l', '-'],
-    ['i', 'n', 'm', '-', 'e', 'r'],
+    ['i', 'r', 'm', '-', 'e', 'r'],
     ['t', '-', 'i', '-', 'a', 'm'],
     ['-', '-', 'l', '-', 'f', '-'],
     ['-', '-', 'e', '-', '-', '-']
@@ -77,13 +77,13 @@ ShoutOutLayer.prototype.render = function(renderer, interpolation) {
 ShoutOutLayer.prototype.update = function(frame, relativeFrame) {
   this.cameraController.updateCamera(relativeFrame);
 
-  if (relativeFrame >= 451 && !this.secondCubesInScene) {
+  if (relativeFrame >= 651 && !this.secondCubesInScene) {
     this.secondCubesInScene = true;
     for (var i=0; i < this.numCubes; i++) {
       this.scene.remove(this.cubes[i]);
       this.scene.add(this.second_cubes[i]);
     }
-  } else if (relativeFrame <= 450 && this.secondCubesInScene) {
+  } else if (relativeFrame <= 650 && this.secondCubesInScene) {
     this.secondCubesInScene = false;
     for (var i=0; i < this.numCubes; i++) {
       this.scene.remove(this.second_cubes[i]);
