@@ -10,14 +10,14 @@
     "type": "SunLayer",
     "displayName": "Sun",
     "startFrame": 240,
-    "endFrame": 999,
+    "endFrame": 499,
     "color": "#ffff00"
   },
   {
     "type": "ParticleLayer",
     "displayName": "Spaaaaarks",
-    "startFrame": 1000,
-    "endFrame": 1599,
+    "startFrame": 500,
+    "endFrame": 2270,
     "color": "#ff0000",
     "dependencies": [
       "Sparks",
