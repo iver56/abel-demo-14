@@ -33,13 +33,17 @@
     "color": "#1b592f"
   },
   {
-    "type": "NoiseFXLayer",
-    "displayName": "Noise fx",
-    "startFrame": 2180,
-    "endFrame": 2280,
-    "color": "#1b592f",
-    "config": {
-      "offset": 0
-    }
+    "type": "MultiplyLayer",
+    "displayName": "Multiply 1",
+    "startFrame": 2100,
+    "endFrame": 2270,
+    "color": "#1b59ff"
+  },
+  {
+    "type": "MultiplyLayer2",
+    "displayName": "Multiply 2",
+    "startFrame": 3405,
+    "endFrame": 3430,
+    "color": "#1b59ff"
   }
 ]
