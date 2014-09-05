@@ -9,7 +9,7 @@
   {
     "type": "SunLayer",
     "displayName": "Sun",
-    "startFrame": 600,
+    "startFrame": 240,
     "endFrame": 999,
     "color": "#ffff00"
   },

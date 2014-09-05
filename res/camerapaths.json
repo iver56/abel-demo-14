@@ -41,8 +41,31 @@
       {
         "type": "point",
         "startFrame": 0,
-        "endFrame": 100,
+        "endFrame": 60,
         "point": [0, 0, 1000]
+      },
+      {
+        "type": "spline",
+        "startFrame": 61,
+        "endFrame": 400,
+        "points": [
+          [0, 0, 1000],
+          [250, 0, 1300],
+          [500, 0, 1600]
+        ]
+      }
+    ],
+    "lookAt": [
+      {
+        "type": "spline",
+        "startFrame": 0,
+        "endFrame": 60,
+        "easing": "smoothstep",
+        "points": [
+          [-2162.96,0,0],
+          [3.62,16.73,198.63],
+          [3.62,16.73,198.63]
+        ]
       }
     ]
   },

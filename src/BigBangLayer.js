@@ -76,5 +76,12 @@ BigBangLayer.prototype.update = function(frame, relativeFrame) {
     }
   }
 
+  var color_t = clamp(0, (relativeFrame-240)/60, 1);
+  var r = parseInt(smoothstep(0, 98, color_t));
+  var g = parseInt(smoothstep(0, 190, color_t));
+  var b = parseInt(smoothstep(0, 238, color_t));
+  demo.renderer.setClearColor(new THREE.Color("rgb(" + r + "," + g + "," + b + ")"), 1);
+
+
   this.cameraController.updateCamera(relativeFrame);
 };
