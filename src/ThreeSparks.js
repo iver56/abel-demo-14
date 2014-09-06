@@ -28,7 +28,7 @@ THREE.Particles = (function() {
       },
       sparksInit: function(emitter, SPARKS) {
         var sphereCap = new SPARKS.SphereCapZone(0, 0, 0, 0, 0, 10);
-        emitter.addInitializer(new SPARKS.Lifetime(0, 2));
+        emitter.addInitializer(new SPARKS.Lifetime(1, 4));
         emitter.addInitializer(new SPARKS.Velocity(sphereCap));
         emitter.addAction(new SPARKS.Age());
         emitter.addAction(new SPARKS.Move());

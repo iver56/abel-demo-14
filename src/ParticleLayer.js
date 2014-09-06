@@ -17,7 +17,7 @@ function ParticleLayer(layer) {
   light.position = new THREE.Vector3(0, 0, 600);
   this.scene.add(light);
 
-  this.ps = new THREE.Particles();
+  this.ps = new THREE.Particles({color: 'white'});
   this.scene.add(this.ps);
 
   this.renderPass = new THREE.RenderPass(this.scene, this.camera);
@@ -112,6 +112,7 @@ ParticleLayer.prototype.update = function(frame, relativeFrame) {
     pos = this.astroidPedalCurve(860, relativeFrame, 1200);
   }
 
+  console.log(pos);
   this.ps.emitterPosition.x = pos.x;
   this.ps.emitterPosition.y = pos.y;
   this.ps.emitterPosition.z = pos.z;
