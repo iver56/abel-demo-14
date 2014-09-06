@@ -24,16 +24,22 @@ THREE.Particles = (function() {
       count: 100,
       position: new THREE.Vector3(0, 0, 0),
       program: function(ctx) {
-        ctx.fillRect(0, 0, 10, 10);
+        var centerX = 5;
+        var centerY = 5;
+        var radius = 6;
+
+        ctx.beginPath();
+        ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+        ctx.fill();
       },
       sparksInit: function(emitter, SPARKS) {
         var sphereCap = new SPARKS.SphereCapZone(0, 0, 0, 0, 0, 10);
-        emitter.addInitializer(new SPARKS.Lifetime(1, 4));
+        emitter.addInitializer(new SPARKS.Lifetime(2, 4));
         emitter.addInitializer(new SPARKS.Velocity(sphereCap));
         emitter.addAction(new SPARKS.Age());
         emitter.addAction(new SPARKS.Move());
-        //emitter.addAction(new SPARKS.RandomDrift(10,150,20));
-        emitter.addAction(new SPARKS.Accelerate(0.2));
+        emitter.addAction(new SPARKS.RandomDrift(40, 40, 40));
+        emitter.addAction(new SPARKS.Accelerate(0.6));
       }
     };
 

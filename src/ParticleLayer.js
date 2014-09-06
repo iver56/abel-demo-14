@@ -86,7 +86,7 @@ ParticleLayer.prototype.astroidPedalCurve = function(from, relativeFrame, to, of
 };
 
 ParticleLayer.prototype.update = function(frame, relativeFrame) {
-  var pos = {x: 0, y: 0};
+  var pos = {x: -20000, y: -20000, z: 0};
   if (relativeFrame <= 150) {
     pos = this.archimedianSpiral(0, relativeFrame, 150);
 
