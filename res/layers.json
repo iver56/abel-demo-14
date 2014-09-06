@@ -41,10 +41,17 @@
   },
   {
     "type": "HorizontalBlurLayer",
-    "displayName": "Horizontal blur shader",
+    "displayName": "Horizontal blur",
     "startFrame": 500,
     "endFrame": 2010,
     "color": "#339933"
+  },
+  {
+    "type": "VerticalBlurLayer",
+    "displayName": "Vertical blur",
+    "startFrame": 500,
+    "endFrame": 2010,
+    "color": "#110099"
   },
   {
     "type": "SunLayer",
