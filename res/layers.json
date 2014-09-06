@@ -3,7 +3,7 @@
     "type": "BigBangLayer",
     "displayName": "Big Bang",
     "startFrame": 0,
-    "endFrame": 501,
+    "endFrame": 3426,
     "color": "#1b592f"
   },
   {
@@ -26,6 +26,13 @@
     ]
   },
   {
+    "type": "SunLayer",
+    "displayName": "Sun 2",
+    "startFrame": 2000,
+    "endFrame": 2270,
+    "color": "#ffff00"
+  },
+  {
     "type": "ShoutOutLayer",
     "displayName": "Shout-outs",
     "startFrame": 2271,
@@ -35,7 +42,7 @@
   {
     "type": "MultiplyLayer",
     "displayName": "Multiply 1",
-    "startFrame": 2100,
+    "startFrame": 2170,
     "endFrame": 2271,
     "color": "#1b59ff"
   },

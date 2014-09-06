@@ -7,8 +7,8 @@ function MultiplyLayer() {
 }
 
 MultiplyLayer.prototype.update = function(frame, relativeFrame) {
-  var t = relativeFrame / 170;
-  this.shaderPass.uniforms.amount.value = smoothstep(0, -5, t);
+  var t = relativeFrame / 110;
+  this.shaderPass.uniforms.amount.value = smoothstep(0, -15, t);
 };
 
 MultiplyLayer.prototype.getEffectComposerPass = function() {
