@@ -13,8 +13,8 @@ function SunLayer(layer) {
   this.cameraController = new CameraController(layer.position);
   this.camera = this.cameraController.camera;
 
-  var particleGeometry = new THREE.SphereGeometry(4, 10, 10);
-  var particleMaterial = new THREE.MeshBasicMaterial({ color: 0xff9900});
+  var particleGeometry = new THREE.SphereGeometry(10, 10, 10);
+  var particleMaterial = new THREE.MeshBasicMaterial({ color: 0xFFFFFF});
 
   for (var i = 0; i < this.numShells; i++) {
     var obj3d = new THREE.Object3D();
