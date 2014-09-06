@@ -44,6 +44,7 @@ THREE.Particles = (function() {
     }
 
     var canvas = document.createElement("canvas");
+    canvas.style.visibility = 'hidden';
     canvas.width = options.size;
     canvas.height = options.size;
     var ctx = canvas.getContext("2d");
