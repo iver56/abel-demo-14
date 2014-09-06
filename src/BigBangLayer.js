@@ -81,14 +81,14 @@ BigBangLayer.prototype.update = function(frame, relativeFrame) {
     var g = parseInt(smoothstep(0, 190, color_t));
     var b = parseInt(smoothstep(0, 238, color_t));
     demo.renderer.setClearColor(new THREE.Color("rgb(" + r + "," + g + "," + b + ")"), 1);
-  } else if (relativeFrame >= 500 && relativeFrame < 2000) {
-    demo.renderer.setClearColor(new THREE.Color("rgb(0,0,0)"), 1);
-  } else {
+  } else if (relativeFrame >= 2000 && relativeFrame < 3327) {
     var color_t = clamp(0, (relativeFrame-2000)/60, 1);
     var r = parseInt(smoothstep(0, 98, color_t));
     var g = parseInt(smoothstep(0, 190, color_t));
     var b = parseInt(smoothstep(0, 238, color_t));
     demo.renderer.setClearColor(new THREE.Color("rgb(" + r + "," + g + "," + b + ")"), 1);
+  } else {
+    demo.renderer.setClearColor(new THREE.Color("rgb(0,0,0)"), 1);
   }
 
 

@@ -3,7 +3,7 @@
     "type": "BigBangLayer",
     "displayName": "Big Bang",
     "startFrame": 0,
-    "endFrame": 3426,
+    "endFrame": 3328,
     "color": "#1b592f"
   },
   {
@@ -17,7 +17,7 @@
     "type": "ParticleLayer",
     "displayName": "Spaaaaarks",
     "startFrame": 500,
-    "endFrame": 2270,
+    "endFrame": 2010,
     "color": "#ff0000",
     "dependencies": [
       "Sparks",
@@ -28,29 +28,29 @@
   {
     "type": "SunLayer",
     "displayName": "Sun 2",
-    "startFrame": 2000,
-    "endFrame": 2270,
+    "startFrame": 1970,
+    "endFrame": 2220,
     "color": "#ffff00"
   },
   {
     "type": "ShoutOutLayer",
     "displayName": "Shout-outs",
-    "startFrame": 2271,
-    "endFrame": 3426,
+    "startFrame": 2221,
+    "endFrame": 3329,
     "color": "#1b592f"
   },
   {
     "type": "MultiplyLayer",
     "displayName": "Multiply 1",
     "startFrame": 2170,
-    "endFrame": 2271,
+    "endFrame": 2241,
     "color": "#1b59ff"
   },
   {
     "type": "MultiplyLayer2",
     "displayName": "Multiply 2",
-    "startFrame": 3385,
-    "endFrame": 3430,
+    "startFrame": 3285,
+    "endFrame": 3329,
     "color": "#1b59ff"
   }
 ]
