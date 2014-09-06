@@ -42,7 +42,7 @@
   {
     "type": "MultiplyLayer2",
     "displayName": "Multiply 2",
-    "startFrame": 3405,
+    "startFrame": 3385,
     "endFrame": 3430,
     "color": "#1b59ff"
   }
