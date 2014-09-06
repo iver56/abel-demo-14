@@ -7,6 +7,20 @@
     "color": "#1b592f"
   },
   {
+    "type": "HorizontalBlurLayer",
+    "displayName": "Horizontal blur",
+    "startFrame": 0,
+    "endFrame": 260,
+    "color": "#339933"
+  },
+  {
+    "type": "VerticalBlurLayer",
+    "displayName": "Vertical blur",
+    "startFrame": 0,
+    "endFrame": 260,
+    "color": "#110099"
+  },
+  {
     "type": "SunLayer",
     "displayName": "Sun",
     "startFrame": 240,

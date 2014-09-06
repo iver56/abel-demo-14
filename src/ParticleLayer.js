@@ -20,6 +20,10 @@ function ParticleLayer(layer) {
   this.ps = new THREE.Particles({color: 'white'});
   this.scene.add(this.ps);
 
+  this.ps.emitterPosition.x = -20000;
+  this.ps.emitterPosition.y = -20000;
+  this.ps.emitterPosition.z = 0;
+
   this.renderPass = new THREE.RenderPass(this.scene, this.camera);
 }
 
@@ -86,7 +90,7 @@ ParticleLayer.prototype.astroidPedalCurve = function(from, relativeFrame, to, of
 };
 
 ParticleLayer.prototype.update = function(frame, relativeFrame) {
-  var pos = {x: 0, y: 0, z: 0};
+  var pos = {x: -20000, y: -20000, z: 0};
   if (relativeFrame <= 150) {
     pos = this.archimedianSpiral(0, relativeFrame, 150);
 

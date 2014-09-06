@@ -17,7 +17,7 @@ function BigBangLayer(layer) {
   light.position.set(0, 0, 0);
   this.scene.add(light);
 
-  geometry = new THREE.SphereGeometry(4, 4, 3);
+  geometry = new THREE.SphereGeometry(8, 4, 3);
   material = new THREE.MeshBasicMaterial({ color: 0xffffff});
 
   for (var i = 0; i < this.numberOfSpheres; i++) {
@@ -72,6 +72,12 @@ BigBangLayer.prototype.update = function(frame, relativeFrame) {
       sphere.position.x += sphere.userData.dx;
       sphere.position.y += sphere.userData.dy;
       sphere.position.z += sphere.userData.dz;
+    }
+  }
+
+  if (relativeFrame === 260) {
+    for (var i = 0; i < this.spheres.length; i++) {
+      this.scene.remove(this.spheres[i]);
     }
   }
 
