@@ -20,13 +20,13 @@ THREE.Particles = (function() {
   function SparkParticle(options) {
     if (typeof options == "undefined") options = {};
     var defaults = {
-      size: 10,
+      size: 14,
       count: 100,
       position: new THREE.Vector3(0, 0, 0),
       program: function(ctx) {
-        var centerX = 5;
-        var centerY = 5;
-        var radius = 6;
+        var radius = 7;
+        var centerX = radius;
+        var centerY = radius;
 
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);

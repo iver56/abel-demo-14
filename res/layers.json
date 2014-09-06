@@ -26,6 +26,13 @@
     ]
   },
   {
+    "type": "FocusLayer",
+    "displayName": "Focus shader",
+    "startFrame": 500,
+    "endFrame": 2010,
+    "color": "#ff6600"
+  },
+  {
     "type": "SunLayer",
     "displayName": "Sun 2",
     "startFrame": 1970,
