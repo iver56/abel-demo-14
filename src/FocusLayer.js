@@ -17,4 +17,6 @@ FocusLayer.prototype.end = function() {
 };
 
 FocusLayer.prototype.update = function(frame) {
+  this.shaderPass.uniforms.screenWidth.value = 16 * GU;
+  this.shaderPass.uniforms.screenHeight.value = 9 * GU;
 };
