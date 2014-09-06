@@ -104,12 +104,12 @@ ParticleLayer.prototype.update = function(frame, relativeFrame) {
     pos = this.heart(700, relativeFrame, 780, offset, scale);
 
   } else if (relativeFrame <= 860) {
-    var offset = {x: 700, y: 250, z: 0};
+    var offset = {x: -400, y: 0, z: 0};
     var scale = 1;
     pos = this.heart(780, relativeFrame, 860, offset, scale);
   } else if (relativeFrame <= 1040) {
     var offset = {x: 0, y: 0, z: 0};
-    var scale = 1;
+    var scale = 0.6;
     pos = this.astroidPedalCurve(860, relativeFrame, 1040, offset, scale);
 
   } else if (relativeFrame <= 1240) {
@@ -119,7 +119,7 @@ ParticleLayer.prototype.update = function(frame, relativeFrame) {
 
   } else if (relativeFrame <= 1440) {
     var offset = {x: 0, y: 0, z: 0};
-    var scale = 0.6;
+    var scale = 1;
     pos = this.astroidPedalCurve(1240, relativeFrame, 1440, offset, scale);
   }
 
