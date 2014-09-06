@@ -20,11 +20,11 @@ THREE.Particles = (function() {
   function SparkParticle(options) {
     if (typeof options == "undefined") options = {};
     var defaults = {
-      size: 14,
-      count: 100,
+      size: 28,
+      count: 300,
       position: new THREE.Vector3(0, 0, 0),
       program: function(ctx) {
-        var radius = 7;
+        var radius = 14;
         var centerX = radius;
         var centerY = radius;
 
@@ -33,7 +33,7 @@ THREE.Particles = (function() {
         ctx.fill();
       },
       sparksInit: function(emitter, SPARKS) {
-        var sphereCap = new SPARKS.SphereCapZone(0, 0, 0, 0, 0, 10);
+        var sphereCap = new SPARKS.SphereCapZone(0, 0, 0, 0, 0, 28);
         emitter.addInitializer(new SPARKS.Lifetime(2, 4));
         emitter.addInitializer(new SPARKS.Velocity(sphereCap));
         emitter.addAction(new SPARKS.Age());
@@ -54,18 +54,22 @@ THREE.Particles = (function() {
     canvas.width = options.size;
     canvas.height = options.size;
     var ctx = canvas.getContext("2d");
-    ctx.fillStyle = options.color || "red";
+    ctx.fillStyle = options.color || "white";
     options.program(ctx);
     document.getElementsByTagName("body")[0].appendChild(canvas);
     var texture = new THREE.Texture(canvas);
     texture.needsUpdate = true;
     var geometry = new THREE.Geometry();
+
     var pMaterial = new THREE.ParticleBasicMaterial({
-      color: options.color || "red",
+      color: options.color || "white",
       size: options.size,
       map: texture,
-      transparent: true
+      transparent: true,
+      blending: THREE.AdditiveBlending
     });
+
+    window.pMaterial = pMaterial;
 
     var v;
     var arr = [];
